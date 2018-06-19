@@ -1,8 +1,12 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { inject as service } from '@ember/service';
 import layout from '../templates/head';
 
-export default Ember.Component.extend({
+const headLayoutInModuleUnification = Object.keys(requirejs.entries)
+  .find((entry) => entry.endsWith('/src/ui/routes/application/head'));
+
+export default Component.extend({
   tagName: '',
-  model: Ember.inject.service('head-data'),
-  layout
+  model: service('head-data'),
+  layout: headLayoutInModuleUnification ? require(headLayoutInModuleUnification).default : layout
 });
