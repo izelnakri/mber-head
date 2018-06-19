@@ -11,6 +11,7 @@ module.exports = {
   rules: {
   },
   globals: {
-    requirejs: true
+    requirejs: true,
+    require: true
   }
 };

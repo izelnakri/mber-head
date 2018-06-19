@@ -68,7 +68,7 @@ export default Ember.Route.extend({
 #### Using the service as model in head.hbs
 
 ```javascript
-<meta property="og:title" content={{model.title}} />
+<meta property="og:title" content={{headData.title}} />
 ```
 
 #### Resulting head

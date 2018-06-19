@@ -3,6 +3,7 @@ module.exports = {
     embertest: true
   },
   global: {
-    requirejs: true
+    requirejs: true,
+    require: true
   }
 };
