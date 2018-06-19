@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-head/services/head-data';
+export { default } from 'mber-head/services/head-data';

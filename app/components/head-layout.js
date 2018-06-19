@@ -1,1 +1,1 @@
-export { default } from 'ember-cli-head/components/head-layout';
+export { default } from 'mber-head/components/head-layout';
