@@ -1,10 +1,10 @@
-import Component from '@ember/component';
-import { computed } from '@ember/object';
-import { getOwner } from '@ember/application';
-import layout from '../templates/components/head-layout';
+import Component from "@ember/component";
+import { computed } from "@ember/object";
+import { getOwner } from "@ember/application";
+import layout from "../templates/components/head-layout";
 
 export default Component.extend({
-  tagName: '',
+  tagName: "",
   layout,
 
   /**
@@ -15,14 +15,14 @@ export default Component.extend({
    */
   shouldTearDownOnInit: true,
 
-  headElement: computed(function() {
-    return getOwner(this).lookup('service:-document').head;
+  headElement: computed(function () {
+    return getOwner(this).lookup("service:-document").head;
   }),
 
   init() {
     this._super(...arguments);
 
-    if (this.get('shouldTearDownOnInit')) {
+    if (this.get("shouldTearDownOnInit")) {
       this._tearDownHead();
     }
   },
@@ -51,6 +51,6 @@ export default Component.extend({
   },
 
   _isFastboot() {
-    return typeof FastBoot !== 'undefined'
-  }
+    return typeof FastBoot !== "undefined";
+  },
 });
